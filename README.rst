@@ -26,4 +26,4 @@ Basic usage::
 
 For an example of a py.test fixture that automates starting and stopping servers
 (which cleans up servers at the end of the testing session, but allows multiple servers to be run),
-see `test/util/MockAerohiveFixture.py`, and `test/integration/auth/test_addUser_and_login.py` for an example.
+see ``test/util/MockAerohiveFixture.py``, and ``test/integration/auth/test_addUser_and_login.py`` for an example.
