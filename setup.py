@@ -5,7 +5,7 @@ def readme():
         return f.read()
 
 setup(name="mock_aerohive",
-      version="0.0.1",
+      version="0.0.2",
       description="A mock SSH server emulating Aerohive devices",
       long_description=readme(),
       classifiers=[
