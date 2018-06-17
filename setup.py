@@ -11,7 +11,9 @@ setup(name="mock_aerohive",
       url="https://github.com/pencot/mock_aerohive",
       author="Ryan Leonard",
       license="MIT",
-      packages="mock_aerohive",
+      packages=[
+        "mock_aerohive",
+      ],
       install_requires=[
         "mockssh >=1.4.5,<2"
       ],
