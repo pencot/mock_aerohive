@@ -1,0 +1,7 @@
+codecov==2.0.15
+hypothesis==3.58.0
+MockSSH==1.4.5
+pexpect==4.6.0
+pycrypto==2.6.1
+pytest==3.6.1
+pytest-cov==2.5.1
