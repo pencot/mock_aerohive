@@ -9,6 +9,9 @@ Mock Aerohive
 .. image:: https://codecov.io/gh/pencot/mock_aerohive/branch/master/graph/badge.svg
   :target: https://codecov.io/gh/pencot/mock_aerohive
 
+.. image:: https://img.shields.io/pypi/pyversions/mock_aerohive.svg
+  :target: https://pypi.org/project/mock-aerohive/
+
 A mock SSH server emulating Aerohive devices.
 
 Install::
