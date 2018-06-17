@@ -1,10 +1,16 @@
 Mock Aerohive
 -------------
+.. image:: https://img.shields.io/pypi/v/mock-aerohive.svg
+  :target: https://pypi.org/project/mock-aerohive/
+
 .. image:: https://gitlab.com/pencot/mock_aerohive/badges/master/pipeline.svg
   :target: https://github.com/pencot/mock_aerohive/commits/master
 
 .. image:: https://codecov.io/gh/pencot/mock_aerohive/branch/master/graph/badge.svg
   :target: https://codecov.io/gh/pencot/mock_aerohive
+
+.. image:: https://img.shields.io/pypi/pyversions/mock_aerohive.svg
+  :target: https://pypi.org/project/mock-aerohive/
 
 A mock SSH server emulating Aerohive devices.
 
@@ -32,3 +38,8 @@ Basic usage::
 For an example of a py.test fixture that automates starting and stopping servers
 (which cleans up servers at the end of the testing session, but allows multiple servers to be run),
 see ``test/util/MockAerohiveFixture.py``, and ``test/integration/auth/test_addUser_and_login.py`` for an example.
+
+Versioning
+^^^^^^^^^^
+
+This package uses semantic versioning.

@@ -1,6 +1,9 @@
 .hypothesis/
 .pytest_cache/
+build/
 coverage/
+dist/
+*.egg-info/
 .coverage
 private.key
 public.key
