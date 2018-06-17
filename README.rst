@@ -1,5 +1,10 @@
 Mock Aerohive
 -------------
+.. image:: https://gitlab.com/pencot/mock_aerohive/badges/master/pipeline.svg
+  :target: https://github.com/pencot/mock_aerohive/commits/master
+
+.. image:: https://codecov.io/gh/pencot/mock_aerohive/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/pencot/mock_aerohive
 
 A mock SSH server emulating Aerohive devices.
 
