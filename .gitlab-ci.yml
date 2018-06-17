@@ -1,0 +1,13 @@
+stages:
+  - test
+
+unit-test:
+  stage: test
+  image: python:2.7
+  before_script:
+    - pip install -r requirements.txt
+  script:
+    - py.test
+        --cov=mock_aerohive
+        --cov-report=html:coverage
+        --cov-report=term
