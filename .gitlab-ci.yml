@@ -11,3 +11,4 @@ unit-test:
         --cov=mock_aerohive
         --cov-report=html:coverage
         --cov-report=term
+    - codecov
