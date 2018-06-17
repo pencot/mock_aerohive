@@ -1,5 +1,8 @@
 Mock Aerohive
 -------------
+.. image:: https://img.shields.io/pypi/v/mock-aerohive.svg
+  :target: https://pypi.org/project/mock-aerohive/
+
 .. image:: https://gitlab.com/pencot/mock_aerohive/badges/master/pipeline.svg
   :target: https://github.com/pencot/mock_aerohive/commits/master
 
