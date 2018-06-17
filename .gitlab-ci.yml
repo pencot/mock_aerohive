@@ -1,5 +1,6 @@
 stages:
   - test
+  - publish
 
 unit-test:
   stage: test
@@ -12,3 +13,20 @@ unit-test:
         --cov-report=html:coverage
         --cov-report=term
     - codecov
+
+publish:
+  stage: publish
+  image: python:2.7
+  #only:
+  #  - master
+  before_script:
+    - pip install -r requirements.txt
+    - python setup.py sdist bdist_wheel
+    - twine upload dist/* --skip-existing
+  artifacts:
+    paths:
+      - build/
+      - dist/
+      - mock_aerohive.egg-info/
+    when: always
+    expire_in: 1 week
