@@ -1,0 +1,8 @@
+.hypothesis/
+.pytest_cache/
+coverage/
+.coverage
+private.key
+public.key
+
+*.pyc
