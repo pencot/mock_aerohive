@@ -17,8 +17,8 @@ unit-test:
 publish:
   stage: publish
   image: python:2.7
-  #only:
-  #  - master
+  only:
+    - master
   before_script:
     - pip install -r requirements.txt
   script:
