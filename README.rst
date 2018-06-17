@@ -4,9 +4,11 @@ Mock Aerohive
 A mock SSH server emulating Aerohive devices.
 
 Install::
+
   pip install mock_aerohive
 
 Basic usage::
+
   from mock_aerohive import MockAerohive
 
   aerohive = MockAerohive()
