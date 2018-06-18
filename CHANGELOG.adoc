@@ -15,6 +15,15 @@
 
 == link:{repo-compare}{latest-version}{compare-split}HEAD[Unreleased]
 
+=== Added
+
+- Missing docstrings. (#8)
+- Automatic publication during deployment. (#3)
+
+=== Modified
+
+- Fixed package name for PyPi installation.
+
 :version-number: 0.0.2
 :version-date: 2018-06-17
 :version: v{version-number}
