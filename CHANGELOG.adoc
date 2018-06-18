@@ -1,0 +1,33 @@
+= Changelog
+:owner: CodeLenny
+:project: mock_aerohive
+:pip-package: mock-aerohive
+
+:first-commit: fb9b6aeb9b6bd8ddb16f7389f73b8c4eb1a0047e
+:latest-version: v0.0.2
+
+:repo-url: https://github.com/{owner}/{project}
+:repo-compare: {repo-url}/compare/
+:repo-changelog: {repo-url}/blog/master/CHANGELOG.adoc
+:compare-split: ...
+
+:pypi-url: https://pypi.org/project/{pip-package}
+
+== link:{repo-compare}{latest-version}{compare-split}HEAD[Unreleased]
+
+:version-number: 0.0.2
+:version-date: 2018-06-17
+:version: v{version-number}
+:previous-version: {first-commit}
+:version-file-url: {repo-url}/tree/{version}
+:version-diff-url: {repo-compare}{previous-version}{compare-split}{version}
+:version-log-url: {repo-changelog}#{version}---{version-date}
+:version-pypi: {pypi-url}/{version-number}
+
+== link:{version-file-url}[{version} - {version-date}]
+
+link:{version-file-url}[Code] (link:{version-diff-url}[Diff])
+| link:{version-log-url}[Changelog]
+| link:{version-pypi}[{version} on PyPi]
+
+First published version.
