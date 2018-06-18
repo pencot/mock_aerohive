@@ -16,8 +16,10 @@ def get_open_port():
     return port
 
 class MockAerohive:
+    """Creates a (real) SSH server that emulates the commands for Aerohive devices."""
 
     def __init__(self):
+        """Setup a new SSH server.  Call 'run' to start the server listening."""
         self.running = False
         self.reactor_running = False
         self.users = {}
@@ -27,13 +29,32 @@ class MockAerohive:
         ]
 
     def addUser(self, username, password):
+        """Add a valid user account to the SSH server, to allow logins.
+        If an account already exists with the given username, it will be updated with the new password.
+
+        :param str username: The username for the account.
+        :param str password: The password for the account.
+        :returns: MockAerohive -- This SSH server for chaining.
+        """
         self.users[username] = password
         return self
 
     def prompt(self):
+        """Returns the expected prompt for the Aerohive device.
+
+        :returns: str -- The current shell prompt being used by the device.
+        """
         return self.hostname + "#"
 
     def run(self, interface="127.0.0.1", port=None):
+        """Start the SSH server listening.  You must add a username (addUser) before starting the server.
+        (Errors will be thrown!  It's a library limitation.)
+
+        :param str interface: The interface to listen to.  Defaults to ``127.0.0.1``.
+        :param port: The port to listen to.  If not provided (or None), an open port will be chosen.
+        :type port: int or None
+        :returns: int -- The port the SSH server is listening to.
+        """
         if port == None:
             port = get_open_port()
         self.running = True
@@ -52,12 +73,25 @@ class MockAerohive:
         return port
 
     def stop(self):
+        """Stop this specific server from listening to connections.
+
+        This will not prevent the underlying thread from terminating, and may still hang your script!
+        See ``stopAll`` to kill the thread.
+
+        :returns: MockAerohive -- This SSH server for chaining.
+        """
         if self.running:
             self.listener.stopListening()
         self.running = False
         return self
 
     def stopAll(self):
+        """Kill the underlying thread that contains all SSH servers.
+
+        Due to library limitations, you can't start a new server after killing the thread.
+
+        :returns: MockAerohive -- This SSH server for chaining.
+        """
         MockSSH.stopThreadedServer()
         self.running = False
         return self
@@ -109,6 +143,7 @@ class MockAerohive:
         return (" " * len(correct)) + "^-- unknown keyword or invalid input"
 
     def command_hostname(self):
+        """The ``hostname`` mock command."""
         server = self
         class command_hostname(MockSSH.SSHCommand):
             name = "hostname"
