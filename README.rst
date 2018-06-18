@@ -16,7 +16,7 @@ A mock SSH server emulating Aerohive devices.
 
 Install::
 
-  pip install mock_aerohive
+  pip install mock-aerohive
 
 Basic usage::
 
@@ -45,7 +45,7 @@ see ``test/util/MockAerohiveFixture.py``, and ``test/integration/auth/test_addUs
 Some Aerohive commands have been created, for instance, ``hostname``::
 
   ssh admin@127.0.0.1 -p 2222
-  admin@127.0.0.1's password: 
+  admin@127.0.0.1's password:
   Aerohive Networks Inc.
   Copyright (C) 2006-2012
   AH-2A0B00#hostname example-1
