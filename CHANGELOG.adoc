@@ -17,6 +17,7 @@
 
 === Added
 
+- PyUnit fixture to create mock servers. (#10)
 - Missing docstrings. (#8)
 - Automatic publication during deployment. (#3)
 

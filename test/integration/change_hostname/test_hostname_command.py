@@ -1,6 +1,6 @@
 import pexpect
 
-from test.util.MockAerohiveFixture import MockAerohive
+import mock_aerohive.MockAerohiveFixture as MockAerohive
 
 def test_hostname_change(MockAerohive):
     username = "admin"
