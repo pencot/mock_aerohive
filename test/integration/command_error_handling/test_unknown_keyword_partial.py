@@ -1,7 +1,7 @@
 import pexpect
 import MockSSH
 
-from test.util.MockAerohiveFixture import MockAerohive
+import mock_aerohive.MockAerohiveFixture as MockAerohive
 
 # Create a fake command for testing.
 # Syntax: #foobar [foo|foobar|baz]

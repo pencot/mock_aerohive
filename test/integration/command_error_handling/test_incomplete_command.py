@@ -4,7 +4,7 @@ import pexpect
 
 from mock_aerohive.MockAerohive import INCOMPLETE_COMMAND
 
-from test.util.MockAerohiveFixture import MockAerohive
+import mock_aerohive.MockAerohiveFixture as MockAerohive
 
 @given(command=just("hostname"))
 @settings(max_examples=5, deadline=None)

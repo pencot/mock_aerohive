@@ -1,1 +1,2 @@
 from MockAerohive import MockAerohive
+from MockAerohiveFixture import MockAerohive as MockAerohiveFixture

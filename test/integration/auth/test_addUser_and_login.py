@@ -2,7 +2,7 @@ from hypothesis import given, example, settings
 
 import pexpect
 
-from test.util.MockAerohiveFixture import MockAerohive
+import mock_aerohive.MockAerohiveFixture as MockAerohive
 from test.util.Strategies import username_strategy, password_strategy
 
 @given(username=username_strategy, password=password_strategy)
