@@ -54,6 +54,34 @@ Some Aerohive commands have been created, for instance, ``hostname``::
   example-1#exit
   Connection to 127.0.0.1 closed.
 
+PyUnit Fixture
+^^^^^^^^^^^^^^
+
+If you are using PyUnit, this package ships with a test fixture to automatically create and stop mock servers for each
+test.
+
+First, import the fixture into your test file::
+
+  from mock_aerohive import MockAerohiveFixture as MockAerohive
+
+(I like to rename the imported fixture ``MockAerohive``, but that's a personal preference.)
+
+Then, add a parameter to your PyUnit test::
+
+  def test_some_feature(MockAerohive):
+    aerohive = MockAerohive()
+    aerohive.addUser("admin", "aerohive")
+    port = aerohive.run("127.0.0.1")
+
+    # Now you can SSH into the server
+    # ...
+
+    aerohive.stop()
+
+Calling ``aerohive.stop()`` at the end of your test is optional.
+The fixture will automatically clean up all servers once all tests are complete,
+but you can stop each server if they might interfere with future tests.
+
 Versioning
 ^^^^^^^^^^
 
