@@ -1,0 +1,18 @@
+---
+when:
+  event:
+    $eq: pull_request
+  payload:
+    pull_request:
+      head:
+        repo:
+          full_name:
+            $eq: pencot/mock_aerohive
+---
+<% var branch = payload.pull_request.head.ref -%>
+<% var shieldBranch = branch.replace("-", "--").replace("_", "__").replace(" ", "_") -%>
+### Pull Request <%= payload.number %> ###
+
+[![pipeline status](https://gitlab.com/pencot/mock_aerohive/badges/<%= branch %>/pipeline.svg)](https://gitlab.com/pencot/mock_aerohive/commits/<%= branch %>)
+[![coverage report](https://gitlab.com/pencot/mock_aerohive/badges/<%= branch %>/coverage.svg)](https://gitlab.com/pencot/mock_aerohive/commits/<%= branch %>)
+[![docs @ <%= branch %>](https://img.shields.io/badge/readthedocs-%40_<%=shieldBranch %>-blue.svg)](https://mock-aerohive.readthedocs.io/en/<%= branch %>/)
