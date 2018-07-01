@@ -25,6 +25,9 @@ setup(name="mock_aerohive",
       packages=[
         "mock_aerohive",
       ],
+      scripts=[
+        "bin/mock-aerohive",
+      ],
       install_requires=[
         "mockssh >=1.4.5,<2"
       ],
